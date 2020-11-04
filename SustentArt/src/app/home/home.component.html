@@ -1,128 +1,165 @@
 <div class="container">
 
     <!-- Imagem e texto -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light py-2 d-flex align-items-center">
         <a class="navbar-brand" href="#">
             <img src="../assets/logoSustentart.png" width="30" height="30" class="d-inline-block align-top" alt="">
             SustentArt
         </a>
 
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        <form class="form-inline">
+
+            <label class="sr-only" for="inlineFormInputGroupUsername2">E-Mail</label>
+            <div class="input-group mr-2">
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail">
+            </div>
+
+            <label class="sr-only" for="inlineFormInputName2">Nome</label>
+            <input type="password" class="form-control mr-2" id="inlineFormInputName2" placeholder="Senha">
+                                           
+            <button class="btn btn-outline-success" type="submit">Login</button>
+                     
         </form>
     </nav>
 
     <!-- Texto e Foto -->
     <div class="container">
-        <div class="row mt-5 m-5">
-            <div class="col-md-6">
-                <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestiae vero autem
-                    quibusdam sequi perferendis natus vel, inventore nemo assumenda temporibus veniam delectus, aliquam,
-                    quam repellat ut tenetur! Assumenda, placeat? </p>
 
-                <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestiae vero autem
-                    quibusdam sequi perferendis natus vel, inventore nemo assumenda temporibus veniam delectus, aliquam,
-                    quam repellat ut tenetur! Assumenda, placeat? </p>
+        <div class="row mt-3 mb-3 d-flex align-items-center">
+            <div class="col-md-6">
+                <p class="lead justify-content-center" > O <b>SustentArt</b> é um projeto sustentável e inclusivo, que visa criar uma comunidade de pessoas interessadas em dar uma nova utilidade para itens muitas vezes descartados.</p>
+                
+                <p class="lead justify-content-center">Pode ainda, ensinar, por meio de oficinas e cursos, pessoas interessadas em aprender novas habilidades, usando os itens à disposição SustentArt como matéria-prima. </p>
+
+                <form class="form-inline my-2 my-lg-0 ">
+                    <button class="btn btn-success my-3 my-sm-0 mt-5" type="button">Cadastrar</button>
+                </form>
             </div>
 
             <div class="col-md-6">
-                <iframe width="560" height="315"
-                    src="https://www.isover.com.br/sites/isover.com.br/files/styles/isvr_default/public/assets/images/isover_sustentabilidade_materia.jpg"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>                
+                <img class="ml-5" src="https://www.isover.com.br/sites/isover.com.br/files/styles/isvr_default/public/assets/images/isover_sustentabilidade_materia.jpg" alt="sustentabilidade">
             </div>
-
-            <form class="form-inline my-2 my-lg-0 ">
-                <button class="btn btn-success my-2 my-sm-0" type="button">Cadastrar</button>
-            </form>
-
         </div>
 
+        <!-- Pagina 1 do Carousel -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-ride="carousel">
 
-        <!-- Card -->
-        <div class="container">
-            <div class="card-columns text-center">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://www.gnrambiental.com.br/noticias/wp-content/uploads/2019/02/alternativa_de_reciclagem_01.png"
-                        alt="alternativa_de_reciclagem_01">
-                    <div class="card-body">
-                        <h5 class="card-title">Alternativa de Reciclagem</h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis
-                            autem natus aperiam perspiciatis, quos rem eveniet magnam rerum atque dolorem temporibus
-                            accusantium distinctio tempora. Dolor animi debitis mollitia nulla!</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="card-columns text-center">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://www.gnrambiental.com.br/noticias/wp-content/uploads/2019/02/alternativa_de_reciclagem_01.png"
+                                    alt="alternativa_de_reciclagem_01">
+                                <div class="card-body">
+                                    <h5 class="card-title">Alternativa de Reciclagem</h5>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        Porro, debitis autem natus aperiam perspiciatis, quos rem eveniet magnam rerum
+                                        atque dolorem
+                                        temporibus accusantium distinctio tempora. Dolor animi debitis mollitia nulla!
+                                    </p>
+                                    <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <img class="card-img"
+                                        src="https://www.gnrambiental.com.br/noticias/wp-content/uploads/2019/02/alternativa_de_reciclagem_02.png"
+                                        alt="Alternativa de Reciclagem">
+                                    <h5 class="card-title">Alternativa de Reciclagem</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Aspernatur incidunt quos culpa fugiat commodi facilis delectus, blanditiis
+                                        beatae ad ex sit
+                                        pariatur nam laboriosam laborum ipsa esse? Nihil, alias laboriosam?</p>
+                                    <p class="card-text"><small class="text-muted">Atualizados 30 minutos atrás</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <img class="card-img-top"
+                                        src="https://blog.brkambiental.com.br/wp-content/uploads/2019/07/original-b742306ee3cd42b3c57b1a4b986bcb0c.jpg"
+                                        alt="Alternativa de Reciclagem">
+                                    <h5 class="card-title"><br>Alternativa de Reciclagem</h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    <p class="card-text"><small class="text-muted">Atualizados 20 minutos atrás</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img class="card-img"
-                            src="https://www.gnrambiental.com.br/noticias/wp-content/uploads/2019/02/alternativa_de_reciclagem_02.png"
-                            alt="Alternativa de Reciclagem">
-                        <h5 class="card-title">Alternativa de Reciclagem</h5>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
-                            incidunt quos culpa fugiat commodi facilis delectus, blanditiis beatae ad ex sit pariatur
-                            nam laboriosam laborum ipsa esse? Nihil, alias laboriosam?</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 30 minutos atrás</small></p>
+                <!-- Pagina 2 do Carousel -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="card-columns text-center">
+
+                            <div class="card text-center">
+                                <img class="card-img-top"
+                                    src="https://www.moblee.com.br/blog/wp-content/uploads/sites/2/2017/07/praticas-de-sustentabilidade-eventos.png"
+                                    alt="Alternativa de Reciclagem">
+                                <div class="card-body">
+                                    <h5 class="card-title">Alternativa de Reciclagem</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Maxime facere quasi praesentium beatae fuga? Necessitatibus numquam asperiores,
+                                        sint nisi delectus
+                                        dicta optio repellendus animi quaerat autem soluta consectetur corporis rem.</p>
+                                    <p class="card-text"><small class="text-muted">Atualizados 10 minutos atrás</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <img class="card-img"
+                                        src="https://www.greenfm.com.br/wp-content/uploads/2018/08/sustentabilidade-660x330.jpg"
+                                        alt="Alternativa de Reciclagem">
+                                    <h5 class="card-title">Alternativa de Reciclagem</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+                                        numquam sequi? Recusandae molestias, nulla assumenda non ullam nihil illo ate,
+                                        sapiente
+                                        labore modi ipsam sed officia eveniet quo eligendi? Harum, numquam sequi?
+                                        Recusandae
+                                        molestias</p>
+                                    <p class="card-text"><small class="text-muted">Atualizados 7 minutos atrás</small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <img class="card-img"
+                                        src="https://lh3.googleusercontent.com/proxy/u_8XNcwuIcVd9F5K6UVr34TQW7EiqZz5EIFAem0RQpy7XGs9VBuMEbtJ9avtEpYqOf-U209o4IsnOKLWe4eTrDxJJvY3ZI4bQPmbj4had4-AKXC4f1cVEXYwxTMvJxDRYbZ5lzrBfGAhziXz"
+                                        alt="Alternativa de Reciclagem">
+                                    <h5 class="card-title">Alternativa de Reciclagem</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Similique commodi inventore, dolores eveniet porro reiciendis aliquam. Ab quae a
+                                        nesciunt
+                                        quibusdam tenetur porro perferendis saepe, mollitia sapiente ullam officiis
+                                        temporibus.</p>
+                                    <p class="card-text"><small class="text-muted">Atualizados 15 minutos atrás</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img class="card-img-top"
-                            src="https://blog.brkambiental.com.br/wp-content/uploads/2019/07/original-b742306ee3cd42b3c57b1a4b986bcb0c.jpg"
-                            alt="Alternativa de Reciclagem">
-                        <h5 class="card-title"><br>Alternativa de Reciclagem</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 20 minutos atrás</small></p>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
 
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img class="card-img"
-                            src="https://lh3.googleusercontent.com/proxy/u_8XNcwuIcVd9F5K6UVr34TQW7EiqZz5EIFAem0RQpy7XGs9VBuMEbtJ9avtEpYqOf-U209o4IsnOKLWe4eTrDxJJvY3ZI4bQPmbj4had4-AKXC4f1cVEXYwxTMvJxDRYbZ5lzrBfGAhziXz"
-                            alt="Alternativa de Reciclagem">
-                        <h5 class="card-title">Alternativa de Reciclagem</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique commodi
-                            inventore, dolores eveniet porro reiciendis aliquam. Ab quae a nesciunt quibusdam tenetur
-                            porro perferendis saepe, mollitia sapiente ullam officiis temporibus.</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 15 minutos atrás</small></p>
-                    </div>
-                </div>
-
-                <div class="card text-center">
-                    <img class="card-img-top"
-                        src="https://www.moblee.com.br/blog/wp-content/uploads/sites/2/2017/07/praticas-de-sustentabilidade-eventos.png"
-                        alt="Alternativa de Reciclagem">
-                    <div class="card-body">
-                        <h5 class="card-title">Alternativa de Reciclagem</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere
-                            quasi praesentium beatae fuga? Necessitatibus numquam asperiores, sint nisi delectus dicta
-                            optio repellendus animi quaerat autem soluta consectetur corporis rem.</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 10 minutos atrás</small></p>
-                    </div>
-                </div>
-
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img class="card-img"
-                            src="https://www.greenfm.com.br/wp-content/uploads/2018/08/sustentabilidade-660x330.jpg"
-                            alt="Alternativa de Reciclagem">
-                        <h5 class="card-title">Alternativa de Reciclagem</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, numquam
-                            sequi? Recusandae molestias, nulla assumenda non ullam nihil illo at, sapiente labore modi
-                            rem ipsam sed officia eveniet quo eligendi? Harum, numquam sequi? Recusandae molestias,
-                            nulla assumenda non ullam nihil illo at, sapiente labore modi rem ipsam sed officia eveniet
-                            quo eligendi? </p>
-                        <p class="card-text"><small class="text-muted">Atualizados 7 minutos atrás</small></p>
-                    </div>
-                </div>
             </div>
         </div>
-        <!-- /Card -->
-
-    </div>
