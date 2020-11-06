@@ -15,27 +15,27 @@
       
           <div class="form-group mt-3">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" >
+            <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" [(ngModel)]='user.nome' >
           </div>
   
           <div class="form-group">
             <label for="usuario">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="nome@email.com"  >
+            <input type="text" class="form-control" id="email" placeholder="nome@email.com" [(ngModel)]='user.email' >
           </div>
   
           <div class="form-group">
             <label for="usuario">Telefone</label>
-            <input type="text" class="form-control" id="telefone" placeholder="Digite aqui o seu telefone"  >
+            <input type="text" class="form-control" id="telefone" placeholder="Digite aqui o seu telefone" [(ngModel)]='user.telefone' >
           </div>
   
           <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" >
+            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}' >
           </div>
   
           <div class="form-group">
             <label for="senhaConf">Confirmar Senha</label>
-            <input type="password" class="form-control" id="senhaConf" placeholder="Digite a confirmação de senha" >
+            <input type="password" class="form-control" id="senhaConf" placeholder="Digite a confirmação de senha" [(ngModel)='user.senha'] >
           </div>
   
           <div class="form-check">
@@ -46,7 +46,7 @@
           </div>
   
           <div class="d-flex justify-content-center mt-3">
-            <button class="btn btn-outline-success w-25">Cadastrar</button>
+            <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button>
           </div>
         </div>
       </div>

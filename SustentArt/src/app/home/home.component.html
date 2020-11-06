@@ -7,19 +7,19 @@
             SustentArt
         </a>
 
-        <form class="form-inline">
+        <!-- <form class="form-inline"> -->
 
             <label class="sr-only" for="inlineFormInputGroupUsername2">E-Mail</label>
             <div class="input-group mr-2">
-                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail">
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail" [(ngModel)]='userLogin.email'>
             </div>
 
-            <label class="sr-only" for="inlineFormInputName2">Nome</label>
-            <input type="password" class="form-control mr-2" id="inlineFormInputName2" placeholder="Senha">
+            <label class="sr-only" for="inlineFormInputName2">Senha</label>
+            <input type="password" class="form-control mr-2" id="inlineFormInputName2" placeholder="Senha" [(ngModel)]='userLogin.senha'>
 
-            <button class="btn btn-outline-success" type="submit">Login</button>
+            <button class="btn btn-outline-success" type="submit" (click)='entrar()'>Login</button>
 
-        </form>
+        <!-- </form> -->
     </nav>
 
     <!-- Texto e Foto -->
