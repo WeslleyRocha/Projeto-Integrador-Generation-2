@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/HomeComponent";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,
