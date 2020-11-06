@@ -29,3 +29,16 @@ ul.social-network {
   .faInstagram:hover{
   color: #C13584;
   }
+
+  .bg-cl{
+    background-color: #025159;
+  }
+
+  .bg-cl2{
+    background-color: #027373;
+  }
+
+  ul{
+    
+    list-style-type: none;
+  }
