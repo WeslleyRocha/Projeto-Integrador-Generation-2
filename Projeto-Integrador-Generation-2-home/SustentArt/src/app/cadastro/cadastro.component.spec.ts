@@ -23,3 +23,5 @@ describe('CadastroComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
