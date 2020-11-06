@@ -7,13 +7,15 @@ import { HomeComponent } from "./home/HomeComponent";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SobreNosComponent,
-    CadastroComponent
+    CadastroComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
