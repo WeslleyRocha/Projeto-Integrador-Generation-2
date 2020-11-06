@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/HomeComponent";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

@@ -26,12 +26,11 @@
             "styles": [
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-
             ],
             "scripts": [
-            "./node_modules/jquery/dist/jquery.js",
-            "./node_modules/bootstrap/dist/js/bootstrap.js",
-            "./node_modules/popper.js/dist/umd/popper.min.js"
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js"
             ]
           },
           "configurations": {
@@ -125,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SustentArt"
+    }
+  },
+  "defaultProject": "SustentArt",
+  "cli": {
+    "analytics": "925eb36c-10c3-4c53-99b2-109ec71e4873"
+  }
 }
