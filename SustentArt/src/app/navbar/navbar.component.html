@@ -1,24 +1,27 @@
 <!--NAVBAR-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img class="" src="../assets/logoSustentart.png" width="30" height="30" alt="Logo do Projeto SustentArt">
-    <a class="navbar-brand" href="#">SustenArt</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/feed" >Início<span class="sr-only">(página atual)</span></a>
-        </li>
-    
-    
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-      </form>
-    </div>
-  </nav>
 
-  <!--/NAVBAR-->
+<nav class="navbar navbar-light bg-light py-2 d-flex align-items-center">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/logoSustentart.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    SustentArt
+  </a>
+
+  <!-- Campo Login -->
+  <form class="form-inline">
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">E-Mail</label>
+    <div class="input-group mr-2">
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail">
+    </div>
+
+    <label class="sr-only" for="inlineFormInputName2">Nome</label>
+    <input type="password" class="form-control mr-2" id="inlineFormInputName2" placeholder="Senha">
+
+    <button class="btn btn-outline-success" type="submit">Login</button>
+
+  </form>
+  <!-- Campo Login -->
+  
+</nav>
+
+<!--/NAVBAR-->
