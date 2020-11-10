@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/HomeComponent";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
 import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     SobreNosComponent,
-    CadastroComponent,
     FeedComponent,
     NavbarComponent,
     FooterComponent
