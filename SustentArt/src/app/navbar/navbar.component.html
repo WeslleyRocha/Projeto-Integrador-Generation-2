@@ -9,15 +9,15 @@
   <!-- Campo Login -->
   <form class="form-inline">
 
-    <label class="sr-only" for="inlineFormInputGroupUsername2">E-Mail</label>
+    <label class="sr-only" for="email" >E-Mail</label>
     <div class="input-group mr-2">
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail">
+      <input type="text" class="form-control" id="email" [(ngModel)]="email" placeholder="E-Mail">
     </div>
 
     <label class="sr-only" for="inlineFormInputName2">Nome</label>
     <input type="password" class="form-control mr-2" id="inlineFormInputName2" placeholder="Senha">
 
-    <button class="btn btn-outline-success" type="submit">Login</button>
+    <button class="btn btn-success" type="submit">Login</button>
 
   </form>
   <!-- Campo Login -->
