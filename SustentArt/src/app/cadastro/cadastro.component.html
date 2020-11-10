@@ -30,27 +30,28 @@
       <!-- Campo, dados do usuario -->
       <div class="form-group mt-3">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" placeholder="Nome e Sobrenome">
+        <input type="text" class="form-control" id="nome" placeholder="Nome e Sobrenome" [(ngModel)]='user.nome'>
       </div>
 
       <div class="form-group">
-        <label for="usuario">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="e-mail@email.com">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="e-mail@email.com" [(ngModel)]='user.email'>
       </div>
 
       <div class="form-group">
-        <label for="usuario">Telefone</label>
-        <input type="text" class="form-control" id="telefone" placeholder="1199999-9999">
+        <label for="telefone">Telefone</label>
+        <input type="text" class="form-control" id="telefone" placeholder="1199999-9999" [(ngModel)]='user.telefone'>
       </div>
 
       <div class="form-group">
         <label for="senha">Senha</label>
-        <input type="password" class="form-control" id="senha" placeholder="Senha">
+        <input type="password" class="form-control" id="senha" placeholder="Senha" (input)='conferirSenha($event)' value='{{senha}}'> 
+
       </div>
 
       <div class="form-group">
         <label for="senhaConf">Confirmar Senha</label>
-        <input type="password" class="form-control" id="senhaConf" placeholder="Confirmar Senha">
+        <input type="password" class="form-control" id="senhaConf" placeholder="Confirmar Senha" [(ngModel)]='user.senha'>
       </div>
       <!-- Campo, dados do usuario -->
 
@@ -65,7 +66,7 @@
 
       <!-- Botão cadastrar -->
       <div class="d-flex justify-content-center mt-4">
-        <button class="btn btn-outline-success w-25">Cadastrar</button>
+        <button class="btn btn-outline-success w-25" (click)="cadastrar()">Cadastrar</button>
       </div>
       <!-- Botão cadastrar -->
 

@@ -19,6 +19,7 @@ export class AuthService {
   {
     return this.http.post('http://localhost:8080/usuarios/cadastrar', user)
   }
+
   btnSair(){
 
     let ok = false
