@@ -17,13 +17,14 @@ export class NavbarComponent implements OnInit {
     private router: Router
     ) { } 
 
-  ngOnInit(){
+  ngOnInit(): void{
   }
 
   entrar(){
-    return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {this.userLogin = resp
+    return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
+    this.userLogin = resp
     localStorage.setItem('token', this.userLogin.token)
-  this.router.navigate(['/feed'])
+    this.router.navigate(['/feed'])
 })
   }
 }

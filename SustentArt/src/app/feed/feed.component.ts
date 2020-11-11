@@ -13,12 +13,13 @@ export class FeedComponent implements OnInit {
 
   key = 'data'
   reverse = true
+
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
-  tema: Tema = new Tema()
-  listaTemas: Tema[]
-  idTema: number
+  tema: Tema = new Tema();
+  listaTemas: Tema[];
+  idTema: number;
   
   constructor(
     private postagemService: PostagemService,
@@ -41,6 +42,7 @@ export class FeedComponent implements OnInit {
   publicar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
+
     if(this.postagem.titulo == null || this.postagem.texto == null || this.postagem.tema == null){
       alert('Preencha todos os campos antes de publicar!')
     } else{
@@ -61,7 +63,7 @@ export class FeedComponent implements OnInit {
 
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-      this.tema = resp
+      this.tema = resp;
     })
   }
 

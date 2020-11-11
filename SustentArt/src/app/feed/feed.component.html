@@ -1,9 +1,6 @@
 <div class="container">
     <div class="row">
-        <!-- <div class="col-md-3">
-            
-            <app-barra-lateral></app-barra-lateral>
-        </div> -->
+       
     <!-- <div class="col-md-12"> -->
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -47,16 +44,16 @@
             <div class="col-md-6">
               <div class="form-group m-0">
                 <label for="tema">Escolha um tema ou <a href="">Cadastre um novo</a></label> <!--colocar routerLink ="/cadastro-tema"-->
-                <select name="tema" id='tema' class="form-control" [(ngModel)] = 'idTema' (change)= 'findByIdTema()'>
-                  <option>
-                   Digite aqui seu tema
+                <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let item of listaTemas' value={{item.id}}>
+                  {{item.descricao}}}
                   </option>
                 </select>
               </div>
             </div>
 
             <div class="col-md-6 d-flex justify-content-end">
-                <button type="button" class="btn btn-outline-info w-25">Publicar</button>
+                <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
             </div>
     </div>
     <hr class="mt-5 mb-5">
