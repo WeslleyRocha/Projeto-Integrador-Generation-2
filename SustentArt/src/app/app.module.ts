@@ -11,6 +11,8 @@ import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     SobreNosComponent,
     FeedComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DeletePostagemComponent,
+    DeleteTemaComponent
   ],
   imports: [
     BrowserModule,
