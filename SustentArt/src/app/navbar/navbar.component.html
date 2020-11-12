@@ -9,9 +9,12 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/feed" >Início<span class="sr-only">(página atual)</span></a>
+          <a class="nav-link" routerLink="/home" >Home<span class="sr-only">(página atual)</span></a>
         </li>
-        <div *ngIf='auth.btnLogin()'>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/feed" >Feed<span class="sr-only"></span></a>
+        </li>
+        <div *ngIf='authService.btnLogin()'>
          <!-- <form class="form-inline"> -->
 
           <label class="sr-only" for="inlineFormInputGroupUsername2">E-Mail</label>
@@ -24,9 +27,9 @@
 
           <button class="btn btn-outline-success" type="submit" (click)='entrar()'>Login</button>
 
-      <!-- </form> -->
+               <!-- </form> -->
         </div>
-        <div *ngIf='auth.btnSair()'>
+        <div *ngIf='authService.btnSair()'>
           <li class="nav-item">
             <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
           </li>
