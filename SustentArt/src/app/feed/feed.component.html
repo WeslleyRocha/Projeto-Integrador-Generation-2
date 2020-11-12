@@ -43,10 +43,10 @@
     
             <div class="col-md-6">
               <div class="form-group m-0">
-                <label for="tema">Escolha um tema ou <a href="">Cadastre um novo</a></label> <!--colocar routerLink ="/cadastro-tema"-->
+                <label for="tema">Escolha um tema ou <a href='/cadastro-tema'>Cadastre um novo</a></label> <!--colocar routerLink ="/cadastro-tema"-->
                 <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                   <option *ngFor='let item of listaTemas' value={{item.id}}>
-                  {{item.descricao}}}
+                  {{item.conteudo}}}
                   </option>
                 </select>
               </div>
@@ -74,5 +74,4 @@
       </div>
     </nav>
   </div>
-    
 </div>

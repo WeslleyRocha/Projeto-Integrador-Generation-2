@@ -11,6 +11,9 @@ import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { PostTemaComponent } from './post-tema/post-tema.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     SobreNosComponent,
     FeedComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PostTemaComponent,
+    PutTemaComponent,
+    PerfilLateralComponent
   ],
   imports: [
     BrowserModule,

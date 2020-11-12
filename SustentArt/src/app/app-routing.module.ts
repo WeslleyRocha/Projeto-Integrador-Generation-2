@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FeedComponent } from './feed/feed.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
 
 
 
@@ -11,9 +13,9 @@ const routes: Routes = [
   { path:'', redirectTo:'home', pathMatch:'full' },
   { path:'home', component: HomeComponent },
   {path: 'feed', component: FeedComponent},
-  { path:'sobre-nos', component: SobreNosComponent }
-
-  
+  { path:'sobre-nos', component: SobreNosComponent },
+  { path: 'cadastro-tema', component: PostTemaComponent},
+  { path: 'editar-tema/:id', component: PutTemaComponent}
 ];
 
 @NgModule({
