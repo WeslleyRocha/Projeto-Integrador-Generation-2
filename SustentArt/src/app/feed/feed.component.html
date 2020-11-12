@@ -122,6 +122,7 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <!-- <div class="card-body">
             <p class="card-text" aria-describedby="texto"> {{item.descricao}} </p>
             <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">Postado em:
@@ -129,6 +130,31 @@
           </div> -->
         </div>
       </div>
+=======
+    
+          <div class="form-group">
+              <label for="texto">Texto:</label>
+              <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
+              [(ngModel)] = 'postagem.texto'></textarea>
+          </div>
+    
+          <div class="row d-flex align-items-end">
+    
+            <div class="col-md-6">
+              <div class="form-group m-0">
+                <label for="tema">Escolha um tema ou <a href='/cadastro-tema'>Cadastre um novo</a></label> <!--colocar routerLink ="/cadastro-tema"-->
+                <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let item of listaTemas' value={{item.id}}>
+                  {{item.conteudo}}}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
+            </div>
+>>>>>>> put_post_Tema
     </div>
     <!--/LISTA DE POSTAGENS PARA VISUALIZAÇÃO, EDIÇÃO E DELETE-->
 
@@ -160,4 +186,8 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> put_post_Tema
