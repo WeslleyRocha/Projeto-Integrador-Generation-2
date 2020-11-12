@@ -1,3 +1,4 @@
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,13 +13,8 @@ import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
-import { from } from 'rxjs';
-=======
-import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
->>>>>>> delete-postagem-tema
 
 @NgModule({
   declarations: [
@@ -28,13 +24,11 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
     FeedComponent,
     NavbarComponent,
     FooterComponent,
-<<<<<<< HEAD
-    PutPostagemComponent
-=======
+    PutPostagemComponent,
     DeletePostagemComponent,
     DeleteTemaComponent
->>>>>>> delete-postagem-tema
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,4 +41,5 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
