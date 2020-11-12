@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {OrderModule} from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     SobreNosComponent,
     FeedComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PutPostagemComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
+    OrderModule
   
   ],
   providers: [],
