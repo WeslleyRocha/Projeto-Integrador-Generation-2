@@ -9,6 +9,7 @@ import { TemaService } from '../service/tema.service';
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
+
 export class FeedComponent implements OnInit {
 
   key = 'data'
