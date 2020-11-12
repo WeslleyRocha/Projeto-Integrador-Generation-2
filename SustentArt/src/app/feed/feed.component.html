@@ -1,7 +1,5 @@
 <div class="container">
-<<<<<<< HEAD
-  <!-- <div class="row"> -->
-
+  
   <!-- Pagina 1 do Carousel Feed -->
   <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-ride="carousel">
 
@@ -83,95 +81,8 @@
         <p class="lead">Nos diga o que está procurando.</p>
       </div>
     </div>
-
-    <div class="form-group">
-      <label for="titulo">Título:</label>
-      <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
-        [(ngModel)]='postagem.titulo'>
-    </div>
-
-    <div class="form-group">
-      <label for="texto">Texto:</label>
-      <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
-        [(ngModel)]='postagem.texto'></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="imagem">Imagem:</label>
-      <input type="text" class="form-control" id="imagem" placeholder="Link da imagem">
-    </div>
-
-    <div class="row d-flex align-items-end">
-
-      <div class="col-md-6">
-        <div class="form-group m-0">
-          <label for="tema">Escolha um tema ou <a href="">Cadastre um novo</a></label>
-          <!--colocar routerLink ="/cadastro-tema"-->
-          <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-            <option *ngFor='let item of listaTemas' value={{item.id}}>
-              {{item.descricao}}}
-            </option>
-          </select>         
-         </div>
-      </div>
-
+ 
     
-      <div class="col-md-6 d-flex justify-content-end">
-        <button type="button" class="btn btn-success w-25" (click)='publicar()'>Publicar</button>
-      </div>
-
-
-      
-    </div>
-
-    <hr class="mt-5 mb-5">
-
-    <nav class="d-flex justify-content-center">
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
-          href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
-
-        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
-          href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por tema</a>
-
-        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-data-tab" data-toggle="tab"
-          href="#postagens-data" role="tab" aria-controls="nav-profile" aria-selected="true">Postagens por data</a>
-
-        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-regiao-tab" data-toggle="tab"
-          href="#postagens-regiao" role="tab" aria-controls="nav-profile" aria-selected="true">Postagens por região</a>
-      </div>
-    </nav>
-
-  </div>
-=======
-  <div class="row">
-
-    <!-- <div class="col-md-12"> -->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="../assets/img/recicle.jpeg" alt="Primeiro Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="../assets/img/galaoagua.jpg" alt="Segundo Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="../assets/img/lampada.jpeg" alt="Terceiro Slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="justify-content-center m-5">
-    <h3>Qual é o seu interesse? Nos diga o que está procurando.</h3>
     <div class="form-group">
       <label for="titulo">Título:</label>
       <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
@@ -330,5 +241,4 @@
     </div>
   </div>
 </div>
->>>>>>> main
 </div>

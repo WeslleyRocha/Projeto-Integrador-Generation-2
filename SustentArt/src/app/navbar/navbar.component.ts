@@ -13,7 +13,8 @@ export class NavbarComponent implements OnInit {
   senha: string
   userLogin: UserLogin = new UserLogin
 
-  constructor(private authService: AuthService,
+  constructor(
+    private authService: AuthService,
     private router: Router
     ) { } 
 
@@ -24,7 +25,13 @@ export class NavbarComponent implements OnInit {
     return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
     this.userLogin = resp
     localStorage.setItem('token', this.userLogin.token)
-    this.router.navigate(['/feed'])
-})
+    this.router.navigate(['/feed']) })
   }
+  
+  sair(){
+    this.router.navigate(['/home'])
+    localStorage.clear()
+  }
+
+  
 }
