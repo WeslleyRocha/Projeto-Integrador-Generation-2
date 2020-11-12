@@ -14,7 +14,8 @@ export class NavbarComponent implements OnInit {
   userLogin: UserLogin = new UserLogin
 
   constructor(private authService: AuthService,
-    private router: Router
+    private router: Router,
+    public auth: AuthService
     ) { } 
 
   ngOnInit(): void{
@@ -26,5 +27,11 @@ export class NavbarComponent implements OnInit {
     localStorage.setItem('token', this.userLogin.token)
     this.router.navigate(['/feed'])
 })
+  }
+
+  //CÓDIGO A COPIAR PRA MANDAR PRO WESLLEY
+  sair(){
+    this.router.navigate(['/home'])
+    localStorage.clear()
   }
 }

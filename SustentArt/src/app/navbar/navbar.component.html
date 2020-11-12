@@ -6,7 +6,9 @@
     SustentArt
   </a>
 
-  <!-- Campo Login -->
+<!-- ENCAMINHAR WESLLEY-->
+  <div *ngIf='auth.btnLogin()'>
+    <!-- Campo Login -->
   <div class="form-inline">
 
     <label class="sr-only" for="email" >E-Mail</label>
@@ -20,7 +22,30 @@
     <button class="btn btn-success" type="submit" (click)='entrar()'>Login</button>
 
   </div>
-  <!-- Campo Login -->
+  </div>
+  <!--/Campo Login -->
+  
+  
+  
+  <!--CAMPO SAIR-->
+  <div *ngIf='auth.btnSair()'>
+    <div>
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link texto front-wheight-bold p-3" (click)='sair'>Sair</a>
+        </li>
+  
+      </ul>
+      </div>
+  </div>
+<!--/CAMPO SAIR-->
+  
+  
+
+
+
+
+  <!--/Campo sair-->
   
 </nav>
 
