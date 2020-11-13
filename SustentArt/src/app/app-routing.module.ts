@@ -18,6 +18,7 @@ const routes: Routes = [
 
   { path: 'feed', component: FeedComponent},
   { path:'sobre-nos', component: SobreNosComponent },
+  { path: 'post-tema', component: PostTemaComponent},
   { path: 'delete-post', component: DeletePostagemComponent},
   { path: 'delete-tema', component: DeleteTemaComponent},  
   { path: 'edita-post/:id', component: PutPostagemComponent },

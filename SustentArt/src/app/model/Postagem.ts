@@ -4,7 +4,7 @@ import { Tema } from './Tema'
 export class Postagem {
     public id: number
     public titulo: string
-    public texto: string
+    public descricao: string
     public data: Data
     public regiao: string
     public imagem: string
