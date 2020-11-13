@@ -9,12 +9,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/HomeComponent";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-import { FeedComponent } from './feed/feed.component';
+// import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
-import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+// import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
@@ -24,12 +24,12 @@ import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.componen
     AppComponent,
     HomeComponent,
     SobreNosComponent,
-    FeedComponent,
+    // FeedComponent,
     NavbarComponent,
     FooterComponent,
     PutPostagemComponent,
     DeletePostagemComponent,
-    DeleteTemaComponent,
+    // DeleteTemaComponent,
     PostTemaComponent,
     PutTemaComponent,
     PerfilLateralComponent

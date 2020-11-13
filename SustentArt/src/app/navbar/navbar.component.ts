@@ -13,7 +13,8 @@ export class NavbarComponent implements OnInit {
   senha: string
   userLogin: UserLogin = new UserLogin
 
-  constructor(private authService: AuthService,
+  constructor(
+    public authService: AuthService,
     private router: Router
     ) { } 
 
