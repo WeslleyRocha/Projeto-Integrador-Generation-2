@@ -23,7 +23,7 @@
   <!-- Campo Login -->
 
 
-  <div *ngIf='auth.btnLogin()'>
+  <div *ngIf='authService.btnLogin()'>
     <!-- Campo Login -->
     <div class="form-inline">
       <label class="sr-only" for="email">E-Mail</label>
@@ -39,14 +39,12 @@
 
 
   <!--CAMPO SAIR-->
-  <div *ngIf='auth.btnSair()'>
-    <div>
-      <ul>
-        <li class="nav-item">
-          <a class="nav-link texto front-wheight-bold p-3" (click)='sair'>Sair</a>
-        </li>
-      </ul>
-    </div>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado" *ngIf='authService.btnSair()'>
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link text-monospace text-uppercase font-weight-bold text-white p-3 texto justify-content-end" (click) = 'sair()'>Sair</a>
+    </li>
+  </ul>
   </div>
   <!--/CAMPO SAIR-->
 

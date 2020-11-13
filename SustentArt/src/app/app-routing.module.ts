@@ -11,17 +11,18 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 
 
 
+
 const routes: Routes = [
   
   { path:'', redirectTo:'home', pathMatch:'full' },
   { path:'home', component: HomeComponent },
-
   { path: 'feed', component: FeedComponent},
   { path:'sobre-nos', component: SobreNosComponent },
   { path: 'delete-post', component: DeletePostagemComponent},
   { path: 'delete-tema', component: DeleteTemaComponent},  
   { path: 'edita-post/:id', component: PutPostagemComponent },
-  { path: 'editar-tema/:id', component: PutTemaComponent}
+  { path: 'editar-tema/:id', component: PutTemaComponent},
+  { path: 'post-tema', component: PostTemaComponent}
   
 ];
 
