@@ -1,129 +1,191 @@
 <div class="container">
-  <div class="row">
-     
-  <!-- <div class="col-md-12"> -->
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="../assets/img/recicle.jpeg" alt="Primeiro Slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="../assets/img/galaoagua.jpg" alt="Segundo Slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="../assets/img/lampada.jpeg" alt="Terceiro Slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-          </a>
-        </div>
-  <!-- </div> -->
+  <div class="row d-flex conteiner-justufy-center">
 
-  <div class="justify-content-center m-5">
-      <h3>Qual é o seu interesse? Nos diga o que está procurando.</h3>
-      <div class="form-group">
-          <label for="titulo">Título:</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo" 
-          [(ngModel)] = 'postagem.titulo'>
-        </div>
-        <div class="form-group">
-          <label for="data">Data:</label>
-          <input type="date" class="form-control" id="data" placeholder="Ex: dd/mm/aaaa" 
-          [(ngModel)] = 'postagem.data'>
-        </div>
-        <div class="form-group">
-          <label for="regiao">Região:</label>
-          <input type="text" class="form-control" id="regiao" placeholder="Digite a sua região..." 
-          [(ngModel)] = 'postagem.regiao'>
-        </div>
-        <div class="form-group">
-          <label for="imagem">Imagem:</label>
-          <input type="text" class="form-control" id="imagem" placeholder="http://imagem.com" 
-          [(ngModel)] = 'postagem.imagem'>
-        </div>
-
-        <div class="form-group">
-          <label for="material">Material:</label>
-          <input type="text" class="form-control" id="material" placeholder="Digite aqui o tipo de material" 
-          [(ngModel)] = 'postagem.material'>
-        </div>
-  
-        <div class="form-group">
-            <label for="descricao">Descrição:</label>
-            <textarea class="form-control" id="descricao" rows="3" placeholder="Descreva sua postagem aqui..."
-            [(ngModel)] = 'postagem.descricao'></textarea>
-        </div>
-  
-        <div class="row d-flex align-items-end">
-  
-          <div class="col-md-6">
-            <div class="form-group m-0">
-              <label for="tema">Escolha um tema ou <a routerLink="/post-tema">Cadastre um novo</a></label> <!--colocar routerLink ="/cadastro-tema"-->
-              <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-                <option *ngFor='let item of listaTemas' value={{item.id}}>
-                {{item.conteudo}}
-                </option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-md-6 d-flex justify-content-end">
-              <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
-          </div>
+    <!-- Componente Carousel Feed -->
+    <app-carousel-feed>
+    </app-carousel-feed>
+    <!-- /Componente Carousel Feed -->
   </div>
-  <hr class="mt-5 mb-5">
 
+  <div class="justify-content-center mt-3 mb-0">
 
-  <nav class="d-flex justify-content-center">
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#minhas-postagens"
-        role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
+    <hr>
 
-      <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab" href="#postagens-temas" role="tab"
-        aria-controls="nav-profile" aria-selected="false">Postagens por tema</a>
-      <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-data-tab" data-toggle="tab" href="#postagens-data" role="tab"
-        aria-controls="nav-profile" aria-selected="true">Postagens por data</a>
-      <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-regiao-tab" data-toggle="tab" href="#postagens-regiao" role="tab"
-        aria-controls="nav-profile" aria-selected="true">Postagens por região</a>
-      
-    </div>
-  </nav>
-</div>
-<div class="row">
-  <div class="col-md-12">
+    <!-- Jumbotron Postagem -->
+    <div class="jumbotron w-100 m-0">
+      <div class="row ">
+        <div class="col-md-6">
+          <h1 class="display-4"> Postagem ! </h1>
+          <p class="lead"> Um mini texto com conteudo q pode ser postado (Ex, vidro etc) VANESSA AJUDA AQUI! </p>
+          <!-- <hr class="my-4">
+          <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p> -->
+          <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a> -->
 
-      <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy: key : reverse'>
-          <div class="card-header">
-              <div class="row d-flex align-items-center">
-                  <div class="col-md-8">
-                      <h5 class="card-title">{{item.titulo}}</h5>
-                      <small>Tema: {{item.tema.conteudo}} </small>
-                  </div>
-                  <div class="col-md-4 d-flex justify-content-end" >
-
-                      <button class="mr-3 btn btn-outline-info"
-                          [routerLink]="['/edita-post',item.id]" *ngIf='auth.adm()'>Editar</button>
-                      <button class="btn btn-outline-danger ml-3"
-                          [routerLink]="['/delete-post',item.id]" *ngIf='auth.adm()'>Apagar</button>
-                  </div>
-              </div>
+          <div class="form-inline  mt-3 mb-3">
+            <button class="btn btn-outline-primary btn-lg " type="button" data-toggle="modal"
+              data-target="#cadastro">Postar</button>
           </div>
-          <div class="card-body">
-              <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
-              <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
-                  {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-              </small>
+
+        </div>
+
+        <!-- Imagem Jumbotron -->
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center ">
+            <img class="border border-primary rounded d-flex justify-content-center" src="../assets/img_postagem.png"
+              alt="Imagem de Perfil" style="width:300px">
+
+          </div>
+          <!-- /Imagem Jumbotron -->
+        </div>
+      </div>
+    </div>
+    <!-- /Jumbotron Postagem -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+
+          <!-- Jumbotron -->
+          <div class="justify-content-center m-5">
+
+            <div class="d-flex justify-content-center ">
+              <img class="border border-primary rounded d-flex justify-content-center" src="../assets/img_post.png"
+                alt="Imagem de Perfil" style="width:180px">
+
+            </div>
+            <!-- /Jumbotron -->
+
+
+            <!-- Campo cadastrar Postagem -->
+            <div class="form-group">
+              <label for="titulo">Título:</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+                [(ngModel)]='postagem.titulo'>
+            </div>
+
+            <div class="form-group">
+              <label for="data">Data:</label>
+              <input type="date" class="form-control" id="data" placeholder="Ex: dd/mm/aaaa"
+                [(ngModel)]='postagem.data'>
+            </div>
+
+            <div class="form-group">
+              <label for="regiao">Região:</label>
+              <input type="text" class="form-control" id="regiao" placeholder="Digite a sua região..."
+                [(ngModel)]='postagem.regiao'>
+            </div>
+
+            <div class="form-group">
+              <label for="imagem">Imagem:</label>
+              <input type="text" class="form-control" id="imagem" placeholder="http://imagem.com"
+                [(ngModel)]='postagem.imagem'>
+            </div>
+
+            <div class="form-group">
+              <label for="material">Material:</label>
+              <input type="text" class="form-control" id="material" placeholder="Digite aqui o tipo de material"
+                [(ngModel)]='postagem.material'>
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <textarea class="form-control" id="descricao" rows="3" placeholder="Descreva sua postagem aqui..."
+                [(ngModel)]='postagem.descricao'></textarea>
+            </div>
+
+            <div class="row d-flex align-items-end">
+
+              <div class="col-md-6">
+                <div class="form-group m-0">
+                  <label for="tema">Escolha um tema ou <button type="button" class="btn btn-primary btn-sm"
+                      data-toggle="modal" data-target="#cadastro">Cadastre um novo</button>
+
+                    <a routerLink="/post-tema">Cadastre um novo</a> </label>
+                  <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                    <option *ngFor='let item of listaTemas' value={{item.id}}>
+                      {{item.conteudo}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <hr class="mt-5 mb-5">
+              <!-- /Campo cadastrar Postagem -->
+
+
+              <div class="modal-footer">
+
+                <!-- Botão Publicar -->
+                <button type="button" class="btn btn-success" (click)='publicar()'
+                  data-dismiss="modal">Publicar</button>
+                <!-- /Botão Publicar -->
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Modal -->
+
+    <!-- Campo Busca -->
+    <nav class="d-flex justify-content-center mb-3 mt-5">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+        <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
+          href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
+
+        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
+          href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por
+          Tema</a>
+
+        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-data-tab" data-toggle="tab"
+          href="#postagens-data" role="tab" aria-controls="nav-profile" aria-selected="true">Postagens por Data</a>
+
+        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-regiao-tab" data-toggle="tab"
+          href="#postagens-regiao" role="tab" aria-controls="nav-profile" aria-selected="true">Postagens por
+          Região</a>
+      </div>
+    </nav>
+
+    <!-- /Campo Busca -->
+
+    <!-- Postagens -->
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy: key : reverse'>
+          <div class="card-header">
+            <div class="row d-flex align-items-center">
+              <div class="col-md-8">
+                <h5 class="card-title">{{item.titulo}}</h5>
+                <small>Tema: {{item.tema.conteudo}} </small>
+              </div>
+              <div class="col-md-4 d-flex justify-content-end">
+
+                <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]"
+                  *ngIf='auth.adm()'>Editar</button>
+                <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post',item.id]"
+                  *ngIf='auth.adm()'>Apagar</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
+            <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
+              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Postagens -->
+
+
   </div>
 </div>
-
-
