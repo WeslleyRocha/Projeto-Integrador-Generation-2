@@ -21,7 +21,7 @@
 
 
 
-            <!-- Modal -->
+            <!-- Modal Cadastro de usuario -->
             <div class="modal fade" id="cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
 
@@ -67,7 +67,7 @@
                                         <input type="text" class="form-control" id="nome" placeholder="Nome e Sobrenome"
                                             [(ngModel)]='user.nome'>
                                         <div class="invalid-feedback">Favor verificar o campo Nome.</div>
-                                        
+
                                     </div>
 
                                     <div class="form-group">
@@ -102,10 +102,17 @@
                                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
                                             required>
 
-                                        <label class="form-check-label" for="invalidCheck">Concordo com os termos e
-                                            condições de uso.</label>
+                                        <!-- <label class="form-check-label" for="invalidCheck">Concordo com os termos e
+                                            condições de uso.</label> -->
+
+                                        <a type="text" class="primary" data-toggle="modal"
+                                            data-target="#ModalLongoExemplo">
+                                            Concordo com os termos e condições de uso.</a>
+
                                     </div>
                                     <!-- Check termos de uso -->
+
+
                                 </div>
                             </div>
 
@@ -122,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
+            <!-- /Modal Cadastro de usuario -->
 
             <!-- Imagen sustentabilidade, ao lado do texto SustentArt -->
             <div class="col-md-6">
@@ -241,18 +248,61 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Próximo</span>
-                </a>
+                </div>                               
 
             </div>
         </div>
     </div>
+
+    <!-- Modal Termos e condições de uso -->
+    <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalLongoExemplo"> Condições de uso <b><i>SustentArt</i></b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. <br>
+
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet rutrum faucibus dolor auctor. <br>
+
+                    Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. <br>
+
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. <br>
+
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet rutrum faucibus dolor auctor. <br>
+
+                    Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. <br>
+
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. <br>
+
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet rutrum faucibus dolor auctor. <br>
+
+                    Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. <br>
+
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. <br>                 
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Termos e condições de uso -->
+
 </div>

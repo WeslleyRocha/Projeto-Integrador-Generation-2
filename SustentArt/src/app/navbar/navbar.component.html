@@ -5,6 +5,11 @@
     <img src="../assets/logoSustentart.png" width="30" height="30" class="d-inline-block align-top" alt="">
     SustentArt
   </a>
+
+  <div>
+    <button type="button" class="btn btn-outline-success">Cadastrar Temas</button>
+  </div>
+
   <div class="form-inline" *ngIf='authService.btnLogin()'>
 
    <!-- Campo Login -->
@@ -22,21 +27,17 @@
   </div>
   <!-- Campo Login -->
 
-  <!--/NAVBAR-->
-
-
-  <!--CAMPO SAIR-->
+  
+  <!--Botão SAIR-->
   <div *ngIf='authService.btnSair()'>
-    <div>
-      <ul>
+     <ul>
         <li>
-          <a class="btn btn-outline-success" (click)='sair()'>Sair</a>
+          <button class="btn btn-outline-success" (click)='sair()'>Sair</button>
         </li>
       </ul>
-    </div>
-  </div>
-  
-  <!--/CAMPO SAIR-->
+    
+  </div>  
+  <!--/Botão SAIR-->
 
 
 </nav>
