@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserLogin } from '../model/UserLogin';
@@ -11,11 +12,13 @@ import { AuthService } from '../service/auth.service';
 export class NavbarComponent implements OnInit {
   email: string
   senha: string
+  nome: string
   userLogin: UserLogin = new UserLogin
 
   constructor(
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
     ) { } 
 
   ngOnInit(): void{
@@ -26,13 +29,14 @@ export class NavbarComponent implements OnInit {
     this.userLogin = resp
     localStorage.setItem('token', this.userLogin.token)
     localStorage.setItem('email', this.userLogin.email)
+    localStorage.setItem('nome', this.userLogin.nome)
     this.router.navigate(['/feed']) })
   }
   
   sair(){
     this.router.navigate(['/home'])
     localStorage.clear()
-    alert("Obrigado pela visita, até a próxima.. ;D")
+    this.alert.showAlertSuccess("Obrigado pela visita, até a próxima.. ;D")
   }
 
   

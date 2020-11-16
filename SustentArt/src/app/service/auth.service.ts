@@ -51,4 +51,10 @@ export class AuthService {
     } 
     return ok
   }
+
+  nomeUser()
+  {
+    let nome = localStorage.getItem('nome')
+    return nome
+  }
 }

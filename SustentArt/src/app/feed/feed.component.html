@@ -17,7 +17,7 @@
         <div class="col-md-6">
           <h1 class="display-4"> Postagem ! </h1>
           <p class="lead"> Um mini texto com conteudo q pode ser postado (Ex, vidro etc) VANESSA AJUDA AQUI! </p>
-          
+
           <div class="form-inline  mt-3 mb-3">
             <button class="btn btn-success btn-lg " type="button" data-toggle="modal"
               data-target="#cadastro">Postar</button>
@@ -41,9 +41,9 @@
 
     <!-- Modal Cadastro Postagem -->
     <div class="modal fade" id="cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true" >
+      aria-hidden="true">
 
-      <div class="modal-dialog" role="document" >
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
 
 
@@ -95,9 +95,21 @@
                 [(ngModel)]='postagem.descricao'></textarea>
             </div>
 
-            <div class="row d-flex align-items-end">         
+            <div class="col-md-6">
+              <div class="form-group m-0">
+                <label for="tema">Escolha um tema </label>
 
-              <hr >
+                <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let item of listaTemas' value={{item.id}}>
+                    {{item.conteudo}}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row d-flex align-items-end">
+
+              <hr>
               <!-- /Campo cadastrar Postagem -->
 
               <div class="modal-footer">
@@ -144,29 +156,40 @@
           <div class="card-header">
             <div class="row d-flex align-items-center">
               <div class="col-md-8">
-                <h5 class="card-title">{{item.titulo}}</h5>
-                <small>Tema: {{item.tema.conteudo}} </small>
-              </div>
-              <div class="col-md-4 d-flex justify-content-end">
 
-                <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]"
-                  *ngIf='auth.adm()'>Editar</button>
-                <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post',item.id]"
-                  *ngIf='auth.adm()'>Apagar</button>
+                <!-- AQUIII -->
+
+                <div class="row">
+
+                  <div class=" col-sm-8 rounded d-flex ">
+                    <img src="{{item.imagem}}" alt="Imagem de Perfil" style="width:300px">
+                  </div>
+
+                  <div class="col-md-4 mb-0 ml-0 mr-0  justify-content-end">
+                    <h5 class="card-title">{{item.titulo}}</h5>
+                    <small>Tema: {{item.tema.conteudo}} </small>
+
+                    <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]"
+                      *ngIf='auth.adm()'>Editar</button>
+
+                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post',item.id]"
+                      *ngIf='auth.adm()'>Apagar</button>
+                  </div>        
+                </div>
+
+              </div>
+              <div class="card-body">
+                <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
+                <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
+                  {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+                </small>
               </div>
             </div>
           </div>
-          <div class="card-body">
-            <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
-            <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
-              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-            </small>
-          </div>
         </div>
       </div>
+      <!-- Postagens -->
+
+
     </div>
-    <!-- Postagens -->
-
-
   </div>
-</div>

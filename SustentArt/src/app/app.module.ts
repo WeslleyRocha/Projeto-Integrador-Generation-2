@@ -2,7 +2,8 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {OrderModule} from 'ngx-order-pipe';
+import { OrderModule} from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,8 +18,8 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
-import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { CarouselFeedComponent } from './carousel-feed/carousel-feed.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 
@@ -35,8 +36,8 @@ import { CarouselFeedComponent } from './carousel-feed/carousel-feed.component';
     DeleteTemaComponent,
     PostTemaComponent,
     PutTemaComponent,
-    PerfilLateralComponent,
-    CarouselFeedComponent
+    CarouselFeedComponent,
+    AlertasComponent
    
    
   ],
@@ -47,7 +48,9 @@ import { CarouselFeedComponent } from './carousel-feed/carousel-feed.component';
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
+
   
   ],
   providers: [],

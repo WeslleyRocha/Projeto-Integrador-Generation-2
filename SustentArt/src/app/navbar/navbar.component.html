@@ -6,15 +6,18 @@
     SustentArt
   </a>
 
-  <div>
-    <button type="button" class="btn btn-outline-success">Cadastrar Temas</button>
+  <div *ngIf="authService.btnSair()">
+    <a class="navbar-brand" routerLink="/home">Home</a>
+    <a class="navbar-brand" routerLink="/feed">Feed</a>
+    <a class="navbar-brand" routerLink="#">Perfil</a> <!-- Verificar com o Thiago -->
+    <a class="navbar-brand" routerLink="/post-tema">Tema</a>
   </div>
 
   <div class="form-inline" *ngIf='authService.btnLogin()'>
 
-   <!-- Campo Login -->
-   
-    <label class="sr-only" for="email" >E-Mail</label>
+    <!-- Campo Login -->
+
+    <label class="sr-only" for="email">E-Mail</label>
     <div class="input-group mr-2">
       <input type="text" class="form-control" id="email" [(ngModel)]="userLogin.email" placeholder="E-Mail">
     </div>
@@ -27,16 +30,19 @@
   </div>
   <!-- Campo Login -->
 
-  
+  <!-- Saudação Usuario -->
+  <h5 *ngIf="authService.btnSair()">Bem-vinde, {{authService.nomeUser()}}</h5>
+  <!-- /Saudação Usuario -->
+
   <!--Botão SAIR-->
   <div *ngIf='authService.btnSair()'>
-     <ul>
-        <li>
-          <button class="btn btn-outline-success" (click)='sair()'>Sair</button>
-        </li>
-      </ul>
-    
-  </div>  
+    <ul>
+      <li>
+        <button class="btn btn-outline-success" (click)='sair()'>Sair</button>
+      </li>
+    </ul>
+
+  </div>
   <!--/Botão SAIR-->
 
 

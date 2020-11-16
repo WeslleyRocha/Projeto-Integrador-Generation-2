@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from '../model/Tema';
@@ -15,7 +16,8 @@ export class PutTemaComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert: AlertasService
   ) { }
 
   ngOnInit(){
@@ -33,7 +35,7 @@ export class PutTemaComponent implements OnInit {
     this.temaService.putTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp 
       this.router.navigate(['/cadastro-tema'])
-      alert('Tema cadastrado com sucesso')
+      this.alert.showAlertSuccess('Tema cadastrado com sucesso')
     })
   }
 }

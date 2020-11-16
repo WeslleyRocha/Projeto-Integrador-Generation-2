@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PerfilLateralComponent } from './perfil-lateral.component';
+import { AlertasComponent } from './alertas.component';
 
-describe('PerfilLateralComponent', () => {
-  let component: PerfilLateralComponent;
-  let fixture: ComponentFixture<PerfilLateralComponent>;
+describe('AlertasComponent', () => {
+  let component: AlertasComponent;
+  let fixture: ComponentFixture<AlertasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PerfilLateralComponent ]
+      declarations: [ AlertasComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PerfilLateralComponent);
+    fixture = TestBed.createComponent(AlertasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
