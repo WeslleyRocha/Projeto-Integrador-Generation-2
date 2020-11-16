@@ -32,4 +32,9 @@ export class TemaService {
   putTema(tema: Tema){
     return this.http.put('http://localhost:8080/tema', tema, this.token)
   }
+
+  getByNomeTema(conteudo : string){
+    return this.http.get(`http://localhost:8080/tema/conteudo/${conteudo}`, this.token)
+
+   }
 }
