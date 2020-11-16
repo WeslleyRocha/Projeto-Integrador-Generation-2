@@ -42,5 +42,16 @@ export class PostagemService {
   
     }
 
+    getAllData(dataI: string, dataF: string){
+      console.log('estou aqui')
+      return this.http.get(`http://localhost:8080/postagem/dataInicio/${dataI}/dataFim/${dataF}`, this.token)
+
+    }
+
+    getByRegiaoPostagem(regiao: string){
+      return this.http.get(`http://localhost:8080/postagem/regiao/${regiao}`, this.token)
+
+    }
+
 }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { AuthService } from '../service/auth.service';
@@ -18,12 +19,19 @@ export class FeedComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  // listaPostagensData: Postagem[] e vai ser colocado futuramente-
   titulo: string
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
   conteudo: string
+
+  // dataI: stringe vai ser colocado futuramente-
+  // dataF: string e vai ser colocado futuramente-
+
+  regiao: string
+  
   
   constructor(
     private postagemService: PostagemService,
@@ -66,6 +74,13 @@ export class FeedComponent implements OnInit {
     })
   }
 
+  // findByDataPostagem(){
+  //   this.postagemService.getAllData(this.dataI, this.dataF).subscribe((resp: Postagem[]) =>{
+  //     this.listaPostagensData = resp e vai ser colocado futuramente
+  //   })
+
+  // }
+
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
@@ -96,5 +111,15 @@ export class FeedComponent implements OnInit {
 
   }
 
+  findByRegiaoPostagem(){
+    if(this.regiao === ''){
+      this.findAllPostagens()
+    }else{
+      this.postagemService.getByRegiaoPostagem(this.regiao).subscribe((resp: Postagem[])=>{
+        this.listaPostagens = resp
+    
+    })
+  }
+  }
 
 }
