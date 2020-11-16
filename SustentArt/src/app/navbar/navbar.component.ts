@@ -25,12 +25,14 @@ export class NavbarComponent implements OnInit {
     return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
     this.userLogin = resp
     localStorage.setItem('token', this.userLogin.token)
+    localStorage.setItem('email', this.userLogin.email)
     this.router.navigate(['/feed']) })
   }
   
   sair(){
     this.router.navigate(['/home'])
     localStorage.clear()
+    alert("Obrigado pela visita, até a próxima.. ;D")
   }
 
   

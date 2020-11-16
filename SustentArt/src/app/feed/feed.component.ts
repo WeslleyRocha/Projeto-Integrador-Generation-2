@@ -6,7 +6,7 @@ import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-feed',
-  templateUrl: './feed.component.html',
+  templateUrl: './feed.component.html',  
   styleUrls: ['./feed.component.css']
 })
 
@@ -29,6 +29,7 @@ export class FeedComponent implements OnInit {
 
     ngOnInit() {
     window.scroll(0,0)
+
     this.findAllPostagens()
     this.findAllTema()
 
@@ -67,8 +68,5 @@ export class FeedComponent implements OnInit {
       this.tema = resp;
     })
   }
-
-
-
 
 }
