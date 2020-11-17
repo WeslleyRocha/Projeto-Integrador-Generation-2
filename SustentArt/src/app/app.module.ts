@@ -21,6 +21,7 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { CarouselFeedComponent } from './carousel-feed/carousel-feed.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { TermosUsoComponent } from './termos-uso/termos-uso.component';
 
 
 
@@ -39,7 +40,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     PutTemaComponent,
     CarouselFeedComponent,
     AlertasComponent,
-    PerfilComponent
+    PerfilComponent,
+    TermosUsoComponent
    
    
   ],

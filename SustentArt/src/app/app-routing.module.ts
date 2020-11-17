@@ -1,3 +1,4 @@
+import { TermosUsoComponent } from './termos-uso/termos-uso.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { HomeComponent } from './home/HomeComponent';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'feed', component: FeedComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'sobre-nos', component: SobreNosComponent },
+  { path: 'termos-uso', component: TermosUsoComponent},
   { path: 'post-tema', component: PostTemaComponent},
   { path: 'delete-post/:id', component: DeletePostagemComponent},
   { path: 'delete-tema/:id', component: DeleteTemaComponent},  

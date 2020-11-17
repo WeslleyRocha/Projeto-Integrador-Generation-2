@@ -26,19 +26,36 @@ export class HomeComponent implements OnInit {
   }
 
   conferirSenha(event: any) {
-    this.senha = event.target.value
+    this.senha = event.target.val
 
   }
+  
+  // cadastrar() {
+  //   let x = document.getElementById("invalidCheck").checked
+  //   if(this.senha === this.user.senha && x != false){
+  //     this.authService.cadastrar(this.user).subscribe((resp: User) => {
+  //       this.user = resp
+  //       this.alert.showAlertSuccess('Cadastrado realizado com sucesso !')
+  //     })
+  //   } else {
+  //     if(x){
+  //       this.alert.showAlertDanger('Senhas não conferem !')
+  //     }else{
+  //       this.alert.showAlertInfo('Por Favor, Concorde com os termos de uso para avançar !')
+  //     }
+  //   }  
+  // } 
+
   cadastrar() {
 
-    if (this.senha === this.user.senha) {
+    if(this.senha === this.user.senha){
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
-        this.alert.showAlertSuccess('Usuário cadastrado com sucesso!')
+        this.alert.showAlertSuccess('Cadastrado realizado com sucesso !')
       })
     } else {
-      this.alert.showAlertDanger('Suas senhas não conferem')
-    }
-  }
+        this.alert.showAlertDanger('Senhas não conferem !')
+    }  
+  } 
 
 }
