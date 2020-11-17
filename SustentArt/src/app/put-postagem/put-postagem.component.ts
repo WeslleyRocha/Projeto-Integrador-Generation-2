@@ -65,7 +65,6 @@ salvar(){
 
 }
 
-//Parte do Henrique
  findAllTema(){
   this.temaService.getAllTemas().subscribe((resp: Tema[]) =>{
     this.listaTemas = resp

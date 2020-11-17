@@ -1,10 +1,10 @@
 <div class="container ">
 
   <div class="justify-content-center">
-    <h3 class="text-center mb-4 text-monospace">Cadastro de um novo tema</h3>
+    <h3 class="text-center mb-4 ">Cadastro de um novo tema</h3>
 
     <div class="form-group">
-      <label class="text-monospace" for="texto">Nome do tema:</label>
+      <label  for="texto">Nome do tema:</label>
       <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo tema"
         [(ngModel)]='tema.conteudo'>
     </div>
@@ -18,7 +18,7 @@
 
     <div class="row mt-5">
       <div class="col-md-12">
-        <h4 class="text-center text-monospace">Lista de temas</h4>
+        <h4 class="text-center">Lista de temas</h4>
       </div>
     </div>
 
@@ -37,15 +37,11 @@
           <td class="d-flex justify-content-end">
             <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-tema', item.id]"> Editar</a>
             <a class="btn btn-outline-danger" [routerLink]="['/delete-tema', item.id]"> Apagar</a>
-          </td>
-
-
+          </td>        
         </tr>
-
       </tbody>
     </table>
 
-
+    <br><br><br><br><br><br><br><br><br>
   </div>
-
 </div>

@@ -1,8 +1,8 @@
 <!--NAVBAR-->
 
-<nav class="navbar navbar-light bg-light py-2 d-flex align-items-center">
+<nav class="navbar navbar-light  py-2 d-flex align-items-center bgNave sticky-top">
   <a class="navbar-brand" href="#">
-    <img src="../assets/logoSustentart.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="../assets/logoSustentart.png" width="35" height="35" class="d-inline-block align-top" alt="">
     SustentArt
   </a>
 
@@ -31,17 +31,16 @@
   <!-- Campo Login -->
 
   <!-- Saudação Usuario -->
-  <h5 *ngIf="authService.btnSair()">Bem-vinde, {{authService.nomeUser()}}</h5>
+  <h5 *ngIf="authService.btnSair()"> Bem-vinde, {{authService.nomeUser()}}</h5>
   <!-- /Saudação Usuario -->
 
   <!--Botão SAIR-->
-  <div *ngIf='authService.btnSair()'>
+  <div *ngIf='authService.btnSair()'>    
     <ul>
       <li>
-        <button class="btn btn-outline-success" (click)='sair()'>Sair</button>
+        <button class="btn btn-outline-success mt-2" (click)='sair()'>Sair</button>
       </li>
-    </ul>
-
+    </ul>     
   </div>
   <!--/Botão SAIR-->
 

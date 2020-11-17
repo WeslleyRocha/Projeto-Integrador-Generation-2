@@ -23,7 +23,13 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
+
+  titulo: string
+  conteudo: string
+  regiao: string
   
+
+
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
@@ -31,26 +37,26 @@ export class FeedComponent implements OnInit {
     private alert: AlertasService
   ) { }
 
-    ngOnInit() {
-    window.scroll(0,0)
+  ngOnInit() {
+    window.scroll(0, 0)
     this.findAllPostagens()
     this.findAllTema()
 
   }
 
-  findAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) =>{
+  findAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
   }
 
-  publicar(){
+  publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
-    if(this.postagem.titulo == null || this.postagem.descricao == null || this.postagem.tema == null){
+    if (this.postagem.titulo == null || this.postagem.descricao == null || this.postagem.tema == null) {
       this.alert.showAlertDanger('Preencha todos os campos antes de publicar!')
-    } else{
+    } else {
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp
         this.postagem = new Postagem()
@@ -60,19 +66,54 @@ export class FeedComponent implements OnInit {
     }
   }
 
-  findAllTema(){
+  findAllTema() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
 
-  findByIdTema(){
+  findByIdTema() {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
     })
   }
 
+  findByRegiaoPostagem() {
+    if (this.regiao === '') {
+      this.findAllPostagens()
+    }
+    else {
+      this.postagemService.getByRegiaoPostagem(this.regiao).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
 
+      })
+    }
+  }
 
+  findByNomeTema() {
+    if (this.conteudo === '') {
+      this.findAllTema()
+    } else {
+      this.temaService.getByNomeTema(this.conteudo).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+
+    }
+
+  }
+
+  findByTituloPostagem() {
+    if (this.titulo === '') {
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+
+      })
+    }
+  }
+
+  
 
 }
+
