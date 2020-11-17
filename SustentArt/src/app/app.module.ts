@@ -20,6 +20,7 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { CarouselFeedComponent } from './carousel-feed/carousel-feed.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 
@@ -37,7 +38,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     PostTemaComponent,
     PutTemaComponent,
     CarouselFeedComponent,
-    AlertasComponent
+    AlertasComponent,
+    PerfilComponent
    
    
   ],

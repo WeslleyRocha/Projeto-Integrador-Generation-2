@@ -27,7 +27,6 @@ export class PutPostagemComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private alert: AlertasService
-
   ) { }
 
   ngOnInit(){
@@ -36,8 +35,7 @@ export class PutPostagemComponent implements OnInit {
     this.idPost = this.route.snapshot.params["id"]
      this.findByIdPostagem(this.idPost)
 
-    this.findAllTema() //parte do henrique
-
+    this.findAllTema()
   }
 
 
