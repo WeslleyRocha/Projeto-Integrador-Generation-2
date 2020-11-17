@@ -3,7 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OrderModule} from 'ngx-order-pipe';
-import { ModalModule } from 'ngx-bootstrap/modal'
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,6 +50,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     HttpClientModule,
     OrderModule,
     ModalModule.forRoot()
+    
 
   
   ],

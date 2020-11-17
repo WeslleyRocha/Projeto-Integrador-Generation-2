@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-post-tema',
@@ -22,6 +23,7 @@ export class PostTemaComponent implements OnInit {
 
   ngOnInit(){
     this.findAllTema()
+    let token =  environment.token
   }
 
   findAllTema(){
@@ -37,7 +39,7 @@ export class PostTemaComponent implements OnInit {
   }
 
   cadastrar(){
-    if (this.tema.conteudo == null){
+    if (this.tema.conteudo == ''){
       this.alert.showAlertSuccess('Preencha o campo de nome do tema corretamente')
     } else {
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {

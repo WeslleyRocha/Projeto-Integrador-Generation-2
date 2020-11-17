@@ -1,6 +1,6 @@
 import { AlertasComponent } from './../alertas/alertas.component';
 import { Injectable } from '@angular/core';
-import { BsComponentRef } from 'ngx-bootstrap/component-loader';
+// import { BsComponentRef } from 'ngx-bootstrap/component-loader';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Injectable({

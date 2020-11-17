@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
+
 @Component({
   selector: 'app-alertas',
   templateUrl: './alertas.component.html',
