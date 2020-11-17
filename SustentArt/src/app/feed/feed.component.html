@@ -178,8 +178,8 @@
                   </div>
                   <div class="col-md-4 d-flex justify-content-end">
 
-                    <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]">Editar</button>
-                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post',item.id]">Apagar</button>
+                    <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]"  *ngIf='auth.adm()'>Editar</button>
+                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post',item.id]"  *ngIf='auth.adm()'>Apagar</button>
                   </div>
                 </div>
               </div>
@@ -219,9 +219,9 @@
                     </div>
                     <div class="col-md-4 d-flex justify-content-end">
 
-                      <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]">Editar</button>
+                      <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]"  *ngIf='auth.adm()'>Editar</button>
                       <button class="btn btn-outline-danger ml-3"
-                        [routerLink]="['/delete-post',item.id]">Apagar</button>
+                        [routerLink]="['/delete-post',item.id]"  *ngIf='auth.adm()'>Apagar</button>
                     </div>
                   </div>
                 </div>
@@ -305,9 +305,9 @@
                     </div>
                     <div class="col-md-4 d-flex justify-content-end">
 
-                      <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]">Editar</button>
+                      <button class="mr-3 btn btn-outline-info" [routerLink]="['/edita-post',item.id]"  *ngIf='auth.adm()'>Editar</button>
                       <button class="btn btn-outline-danger ml-3"
-                        [routerLink]="['/delete-post',item.id]">Apagar</button>
+                        [routerLink]="['/delete-post',item.id]"  *ngIf='auth.adm()'>Apagar</button>
                     </div>
                   </div>
                 </div>

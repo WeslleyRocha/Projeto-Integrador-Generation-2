@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   user: User = new User()
   senha: string
+  foto: string
   constructor(private authService: AuthService, private router: Router) { }
   
   ngOnInit() {
@@ -35,4 +36,4 @@ export class HomeComponent implements OnInit {
     }  
   } 
 
-}
+ }
