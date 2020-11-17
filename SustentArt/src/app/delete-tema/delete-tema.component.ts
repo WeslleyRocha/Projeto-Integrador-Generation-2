@@ -23,10 +23,10 @@ export class DeleteTemaComponent implements OnInit {
     window.scroll(0,0)
 
     let id: number = this.route.snapshot.params["id"]
-    this.findById(id)
+    this.findByIdTema(id)
   }
 
-  findById(id:number){
+  findByIdTema(id:number){
     this.temaService.getByIdTema(id).subscribe((resp: Tema) =>{
       this.tema = resp
     }, err => {
@@ -36,13 +36,13 @@ export class DeleteTemaComponent implements OnInit {
 
   btnSim(){
     this.temaService.deleteTema(this.tema.id).subscribe(() =>{
-      this.router.navigate(['/cadastro-tema']) //confirmar se foi criado o componente cadastro-tema
+      this.router.navigate(['/post-tema'])
       alert('Tema apagado com sucesso'!) 
     })
   }
 
   btnNao(){
-    this.router.navigate(['/cadastro-tema']) //confirmar se foi criado o componente cadastro-tema (ou post-tema)
+    this.router.navigate(['/post-tema']) 
   }
 
 }

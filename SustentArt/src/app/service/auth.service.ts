@@ -43,4 +43,13 @@ export class AuthService {
     return ok
 
   }
+  
+  adm(){
+    let ok = true
+    let email = localStorage.getItem('email')
+    if(email.indexOf('@adm.com') == -1){
+      ok = false
+    } 
+    return ok
+  }
 }

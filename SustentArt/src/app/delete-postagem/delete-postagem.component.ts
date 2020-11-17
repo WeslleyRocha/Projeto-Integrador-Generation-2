@@ -24,7 +24,7 @@ export class DeletePostagemComponent implements OnInit {
     this.findByIdPostagem(id)
   }
 
-  findByIdPostagem(id:number){
+  findByIdPostagem(id:number){ //onde está nosso post postagem?
     return this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => { //criar ou verificar se foi criado no post-tema.ts
       this.postagem = resp
     })
