@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -22,21 +23,27 @@ export class NavbarComponent implements OnInit {
     ) { } 
 
   ngOnInit(): void{
+    let token = environment.token
   }
 
   entrar(){
     return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
     this.userLogin = resp
-    localStorage.setItem('token', this.userLogin.token)
-    localStorage.setItem('email', this.userLogin.email)
-    localStorage.setItem('nome', this.userLogin.nome)
+    environment.token = this.userLogin.token
+    environment.token = this.userLogin.email
+    environment.token = this.userLogin.nome
+
+    // localStorage.setItem('token', this.userLogin.token)
+    // localStorage.setItem('email', this.userLogin.email)
+    // localStorage.setItem('nome', this.userLogin.nome)
     this.router.navigate(['/feed']) })
   }
   
   sair(){
     this.router.navigate(['/home'])
-    localStorage.clear()
-    this.alert.showAlertSuccess("Obrigado pela visita, até a próxima.. ;D")
+    environment.token = ''
+    // localStorage.clear()
+    this.alert.showAlertSuccess("Obrigado pela visita, até a próxima...")
   }
 
   

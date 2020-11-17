@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -22,6 +23,7 @@ export class PostTemaComponent implements OnInit {
 
   ngOnInit(){
     this.findAllTema()
+    let token = environment.token
   }
 
   findAllTema(){
@@ -37,7 +39,7 @@ export class PostTemaComponent implements OnInit {
   }
 
   cadastrar(){
-    if (this.tema.conteudo == null){
+    if (this.tema.conteudo == ''){
       this.alert.showAlertSuccess('Preencha o campo de nome do tema corretamente')
     } else {
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {

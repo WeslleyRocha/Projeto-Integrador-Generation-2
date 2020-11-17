@@ -19,22 +19,21 @@
             <!-- Campo, dados do usuario -->
             <div class="form-group mt-3">
                 <label for="validationServernome">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Nome e Sobrenome"
-                    [(ngModel)]='user.nome'>
-                <div class="invalid-feedback">Favor verificar o campo Nome.</div>
-
+                <input type="text" class="form-control" id="nome" 
+                    [(ngModel)]='user.nome'> {{user.nome}}    
+                         
             </div>
 
             <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" class="form-control" id="email"
-                    placeholder="e-mail@email.com" [(ngModel)]='user.email'> {{user.email}}
+                    [(ngModel)]='user.email'> {{user.email}}
             </div>
 
             <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control" id="telefone" placeholder="1199999-9999"
-                    [(ngModel)]='user.telefone'> {{user.telefone}}
+                <input type="password" class="form-control" id="telefone" 
+                [(ngModel)]='user.telefone'> {{user.telefone}}
             </div>
 
             <div class="form-group">
