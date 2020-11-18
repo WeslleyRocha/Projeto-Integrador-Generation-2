@@ -46,8 +46,8 @@ export class AuthService {
   }
   adm(){
     let ok = true
-    let email = environment.token = 'email'
-    if(email.indexOf('@adm.com') == -1){
+    let email = environment.email
+    if (email.indexOf('@adm.com') == -1){
       ok = false
     } 
     return ok
@@ -56,7 +56,7 @@ export class AuthService {
   // chamar nome
   nomeUser()
   {
-    let nome = environment.token 
+    let nome = environment.nome 
     return nome
   }
 }

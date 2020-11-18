@@ -51,15 +51,7 @@
 
                                         <!-- ALTERAR IMG PERFIL -->
 
-                                        <!-- <div class="form-group mt-3 mb-3 ml-3 ">
-                                            <label class="d-flex justify-content-center">Foto de Perfil</label>
-                                            <input type="text" class="form-control" id="fotoPerfil"
-                                                placeholder="Link Foto">
-
-                                            <button
-                                                class="btn btn-outline-success btn-sm d-flex justify-content-center mt-2 "
-                                                type="button">Alterar</button>
-                                        </div> -->
+                                        
                                     </div>
                                     <!-- Campo Foto de Perfil + Campo URL + Botão -->
 
@@ -94,14 +86,14 @@
                                     <div class="form-group">
                                         <label for="senhaConf">Confirmar Senha</label>
                                         <input type="password" class="form-control" id="senhaConf"
-                                            placeholder="Confirmar Senha" [(ngModel)]='user.senha'>
+                                            placeholder="Confirmar Senha" [(ngModel)]='user.senha' (input)='conferirSenhaDois($event)' value="{{confSenha}}">
                                     </div>
                                     <!-- Campo, dados do usuario -->
 
 
                                     <!-- Check termos de uso -->
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" [(ngModel)]="termoUso" (change)="ok($event)">
 
 
                                         <a type="text" class="primary" data-toggle="modal"
@@ -121,7 +113,12 @@
 
                             <!-- Botão cadastrar -->
                             <button type="button" class="btn btn-success" (click)="cadastrar()"
-                                data-dismiss="modal">Cadastrar</button>
+                                *ngIf="cadastroOk">Cadastrar</button>
+                            <!-- Botão cadastrar -->
+
+                            <!-- Botão cadastrar -->
+                            <button type="button" class="btn btn-success" (click)="cadastrar()"
+                            *ngIf="cadastroOk == false"  data-dismiss="modal" >Cadastrar</button>
                             <!-- Botão cadastrar -->
 
                         </div>
@@ -142,6 +139,7 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-ride="carousel">
 
             <div class="carousel-inner">
+                
                 <div class="carousel-item active">
                     <div class="container">
                         <div class="card-columns text-center">

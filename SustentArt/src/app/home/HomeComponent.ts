@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit {
 
   user: User = new User()
   senha: string
+  termoUso = false
+  cadastroOk = false
+  confSenha: string
+  checkOk = false
 
   constructor(
     private authService: AuthService,
@@ -22,40 +26,52 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   
+    window.scroll(0, 0)
+    
+  }
+
+  ok(event)
+  {
+    this.checkOk = event.target.checked
   }
 
   conferirSenha(event: any) {
-    this.senha = event.target.val
-
+    this.senha = event.target.value
+    
+    
   }
+
+  conferirSenhaDois(event)
+  {
+    this.confSenha = event.target.value
   
-  // cadastrar() {
-  //   let x = document.getElementById("invalidCheck").checked
-  //   if(this.senha === this.user.senha && x != false){
-  //     this.authService.cadastrar(this.user).subscribe((resp: User) => {
-  //       this.user = resp
-  //       this.alert.showAlertSuccess('Cadastrado realizado com sucesso !')
-  //     })
-  //   } else {
-  //     if(x){
-  //       this.alert.showAlertDanger('Senhas não conferem !')
-  //     }else{
-  //       this.alert.showAlertInfo('Por Favor, Concorde com os termos de uso para avançar !')
-  //     }
-  //   }  
-  // } 
+    if (this.senha == this.confSenha && this.checkOk) {
+
+      this.cadastroOk = true
+    }
+  }
 
   cadastrar() {
 
-    if(this.senha === this.user.senha){
+    if (this.senha != this.user.senha) {
+      this.alert.showAlertDanger('Senhas não conferem !')
+      document.getElementById("senha").focus()
+    } else if (this.termoUso == false) {
+      this.alert.showAlertDanger('Por Favor, Concorde com os termos de uso para avançar !')
+    } else {
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.alert.showAlertSuccess('Cadastrado realizado com sucesso !')
+      }, error => {
+        if (error.status == 400)
+        {
+          this.alert.showAlertDanger(" E-mail ja esta cadastrado! ")
+        }
       })
-    } else {
-        this.alert.showAlertDanger('Senhas não conferem !')
-    }  
-  } 
+    }
+  }
+
 
 }
+
+

@@ -40,13 +40,15 @@ export class PostTemaComponent implements OnInit {
 
   cadastrar(){
     if (this.tema.conteudo == ''){
-      this.alert.showAlertSuccess('Preencha o campo de nome do tema corretamente')
+      this.alert.showAlertDanger('Preencha o campo de nome do tema corretamente')
     } else {
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp
       this.router.navigate(['/feed'])
-      this.alert.showAlertDanger('Tema cadastrado com sucesso')
+      this.alert.showAlertSuccess('Tema cadastrado com sucesso')
       })
     }
   }
+
+  
 }

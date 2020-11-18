@@ -22,16 +22,17 @@ export class NavbarComponent implements OnInit {
     private alert: AlertasService
     ) { } 
 
-  ngOnInit(): void{
-    let token = environment.token
+  ngOnInit(){
+    
   }
 
   entrar(){
-    return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
+    this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
     this.userLogin = resp
     environment.token = this.userLogin.token
-    environment.token = this.userLogin.email
-    environment.token = this.userLogin.nome
+    environment.email = this.userLogin.email
+    environment.nome = this.userLogin.nome
+   
 
     // localStorage.setItem('token', this.userLogin.token)
     // localStorage.setItem('email', this.userLogin.email)
@@ -42,7 +43,7 @@ export class NavbarComponent implements OnInit {
   sair(){
     this.router.navigate(['/home'])
     environment.token = ''
-    // localStorage.clear()
+    this.userLogin = new UserLogin()
     this.alert.showAlertSuccess("Obrigado pela visita, até a próxima...")
   }
 

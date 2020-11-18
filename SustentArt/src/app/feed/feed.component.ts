@@ -48,7 +48,7 @@ export class FeedComponent implements OnInit {
     let token = environment.token
 
     if(token == ''){
-      this.router.navigate(['/login'])
+      this.router.navigate(['/home'])
       this.alert.showAlertInfo('Faça o login antes de entrar.')
     }
 
