@@ -26,19 +26,15 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(){
   
-    let ok = environment
-    let token = environment.token
-
-    
     
   }
 
   entrar(){
-    return this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
+    this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
     this.userLogin = resp
     environment.token = this.userLogin.token
-    environment.token = this.userLogin.email
-    environment.token =this.userLogin.nome
+    environment.email = this.userLogin.email
+    environment.nome = this.userLogin.nome
     // localStorage.setItem('token', this.userLogin.token)
     // localStorage.setItem('email', this.userLogin.email)
     // localStorage.setItem('nome', this.userLogin.nome)

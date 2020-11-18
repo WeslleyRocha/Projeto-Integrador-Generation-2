@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
@@ -9,8 +9,12 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+  
   logar(userLogin: UserLogin){
     return this.http.post('http://localhost:8080/usuarios/login', userLogin)
 
@@ -55,7 +59,7 @@ export class AuthService {
 
   nomeUser()
   {
-    let nome = environment.token
-     return nome
+    let nome = environment.nome
+    return nome
   }
 }
