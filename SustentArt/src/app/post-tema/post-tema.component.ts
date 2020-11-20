@@ -4,6 +4,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
+import { faEdit, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+
+
 
 @Component({
   selector: 'app-post-tema',
@@ -11,6 +14,9 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./post-tema.component.css']
 })
 export class PostTemaComponent implements OnInit {
+ 
+  faTrashAlt = faTrashAlt
+  faEdit = faEdit
 
   tema: Tema = new Tema
   listaTema: Tema[]

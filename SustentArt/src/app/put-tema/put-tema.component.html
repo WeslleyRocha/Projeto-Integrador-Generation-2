@@ -2,16 +2,20 @@
 
     <div class="row mt-5 mb-5">
         
-        <div class="col-md-8">
+        <div class="col-md-12">
   
             <div>
                 <div class="form-group">
                   <label for="titulo">Nome do tema:</label>
                   <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo" [(ngModel)]="tema.conteudo">
                 </div>
-  
+                
+                <hr>
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                    <!-- <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button> -->
+
+                    <a class="btn btn-success mr-3 faShareSquare" title="Salvar" (click)='salvar()'>Salvar  
+                        <fa-icon [icon]="faShareSquare" class="faShareSquare"></fa-icon></a>
                 </div>
             </div>
   

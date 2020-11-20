@@ -4,7 +4,7 @@
     <h3 class="text-center mb-4 ">Cadastro de um novo tema</h3>
 
     <div class="form-group">
-      <label  for="texto">Nome do tema:</label>
+      <label for="texto">Nome do tema:</label>
       <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo tema"
         [(ngModel)]='tema.conteudo'>
     </div>
@@ -30,14 +30,23 @@
           <th scope="col" class="d-flex justify-content-end">Modificações</th>
         </tr>
       </thead>
+
       <tbody>
         <tr *ngFor='let item of listaTema'>
           <th scope="row">{{item.id}}</th>
           <td>{{item.conteudo}}</td>
+
+          <!-- Botões Tema Editar / Apagar -->
           <td class="d-flex justify-content-end">
-            <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-tema', item.id]"> Editar</a>
-            <a class="btn btn-outline-danger" [routerLink]="['/delete-tema', item.id]"> Apagar</a>
-          </td>        
+            <a [routerLink]="['/editar-tema', item.id]" class="btn btn-outline-info mr-3 faEdit" title="Editar">
+              <fa-icon [icon]="faEdit" class="faEdit"></fa-icon>
+            </a>
+            
+            <a [routerLink]="['/delete-tema', item.id]" class="btn btn-outline-danger mr-3 faTrashAlt" title="Apagar">
+              <fa-icon [icon]="faTrashAlt" class="faTrashAlt"></fa-icon>
+            </a>
+            <!-- /Botões Tema Editar / Apagar -->
+          </td>
         </tr>
       </tbody>
     </table>

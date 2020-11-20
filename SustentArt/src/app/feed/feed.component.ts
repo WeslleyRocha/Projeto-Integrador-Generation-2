@@ -7,6 +7,8 @@ import { Tema } from '../model/Tema';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+import { faEdit, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-feed',
@@ -15,6 +17,10 @@ import { TemaService } from '../service/tema.service';
 })
 
 export class FeedComponent implements OnInit {
+
+  faTrashAlt = faTrashAlt
+  faEdit = faEdit
+  faSearch = faSearch
 
   key = 'data'
   reverse = true

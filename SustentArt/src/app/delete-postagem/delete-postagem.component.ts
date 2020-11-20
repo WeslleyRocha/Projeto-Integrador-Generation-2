@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from '../model/Postagem';
 import { PostagemService } from '../service/postagem.service';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-delete-postagem',
@@ -11,6 +12,9 @@ import { PostagemService } from '../service/postagem.service';
 })
 export class DeletePostagemComponent implements OnInit {
   
+    faCheck = faCheck
+    faTimes = faTimes
+
   postagem: Postagem = new Postagem
 
   constructor(

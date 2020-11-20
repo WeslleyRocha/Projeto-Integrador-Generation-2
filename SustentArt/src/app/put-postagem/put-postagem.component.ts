@@ -5,6 +5,7 @@ import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,6 +14,8 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./put-postagem.component.css']
 })
 export class PutPostagemComponent implements OnInit {
+
+  faShareSquare = faShareSquare
 
   postagem: Postagem = new Postagem()
   idPost: number

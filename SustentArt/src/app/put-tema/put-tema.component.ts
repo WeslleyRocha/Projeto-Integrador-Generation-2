@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
+import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-put-tema',
@@ -10,6 +11,8 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./put-tema.component.css']
 })
 export class PutTemaComponent implements OnInit {
+  
+  faShareSquare = faShareSquare
 
   tema: Tema = new Tema()
 

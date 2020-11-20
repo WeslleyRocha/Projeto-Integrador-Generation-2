@@ -18,7 +18,6 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
-import { CarouselFeedComponent } from './carousel-feed/carousel-feed.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { TermosUsoComponent } from './termos-uso/termos-uso.component';
@@ -38,7 +37,6 @@ import { TermosUsoComponent } from './termos-uso/termos-uso.component';
     DeleteTemaComponent,
     PostTemaComponent,
     PutTemaComponent,
-    CarouselFeedComponent,
     AlertasComponent,
     PerfilComponent,
     TermosUsoComponent
