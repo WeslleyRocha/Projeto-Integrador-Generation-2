@@ -9,7 +9,6 @@ ul li {
 
 .sublinharTexto:hover
 {
-    text-decoration: underline;
-    
+    text-decoration: underline;    
     font-weight: 780;    
 }
