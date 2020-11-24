@@ -6,11 +6,12 @@
     SustentArt
   </a>
 
-  <div *ngIf="authService.btnSair()">
-    <a class="navbar-brand" routerLink="/home">Home</a>
-    <a class="navbar-brand" routerLink="/feed">Feed</a>
+  <div *ngIf="authService.btnSair() ">
+    
+    <a class="navbar-brand sublinharTexto" routerLink="/home">Home</a>
+    <a class="navbar-brand sublinharTexto" routerLink="/feed">Feed</a>
     <!-- <a class="navbar-brand" routerLink="/perfil">Perfil</a>  -->
-    <a class="navbar-brand" routerLink="/post-tema" *ngIf='authService.adm()'>Tema</a>
+    <a class="navbar-brand sublinharTexto" routerLink="/post-tema" *ngIf='authService.adm()'>Tema</a>
   </div>
 
   <div class="form-inline" *ngIf='authService.btnLogin()'>

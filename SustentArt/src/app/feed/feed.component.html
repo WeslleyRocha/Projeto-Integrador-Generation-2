@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5">
 
 
   <!-- Componente Carousel Feed -->
@@ -348,6 +348,7 @@
               [(ngModel)]='regiao'>
 
           </div>
+          
           <div class="col-md-2 pl-0">
             <a class="btn btn-success w-100 ml-2 faSearch" title="Pesquisar" (click)='findByRegiaoPostagem()'>
               <fa-icon [icon]="faSearch" class="faSearch"></fa-icon> Pesquisar
@@ -378,7 +379,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body ">
                 <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
                 <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
                   {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} / {{item.regiao}}
