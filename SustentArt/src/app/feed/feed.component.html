@@ -258,12 +258,12 @@
 
                     <!-- Botões Tema Editar / Apagar -->
 
-                    <a [routerLink]="['/edita-post',item.id]" class="btn btn-outline-info mr-3 faEdit" title="Editar">
+                    <a [routerLink]="['/edita-post',item.id]" class="btn btn-outline-info mr-3 faEdit" title="Editar" *ngIf='authService.adm()'>
                       <fa-icon [icon]="faEdit" class="faEdit"></fa-icon>
                     </a>
 
                     <a [routerLink]="['/delete-post',item.id]" class="btn btn-outline-danger mr-3 faTrashAlt"
-                      title="Apagar">
+                      title="Apagar" *ngIf='authService.adm()'>
                       <fa-icon [icon]="faTrashAlt" class="faTrashAlt"></fa-icon>
                     </a>
                     <!-- /Botões Tema Editar / Apagar -->

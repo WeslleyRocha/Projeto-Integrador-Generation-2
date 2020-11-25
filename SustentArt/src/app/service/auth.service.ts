@@ -12,13 +12,13 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin){
-    return this.http.post('http://localhost:8080/usuarios/login', userLogin)
+    return this.http.post('https://sustentart.herokuapp.com/usuarios/login', userLogin)
 
   }
 
   cadastrar(user: User)
   {
-    return this.http.post('http://localhost:8080/usuarios/cadastrar', user)
+    return this.http.post('https://sustentart.herokuapp.com/usuarios/cadastrar', user)
   }
 
   btnSair(){
